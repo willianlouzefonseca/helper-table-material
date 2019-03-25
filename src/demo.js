@@ -73,8 +73,8 @@ class ServiceTable extends React.Component {
     let newArray = this.state.serviceData;
     newArray.push(
       {
-        domain: "Edit",
-        name: "Edit"
+        domain: " ",
+        name: " "
       }
     );
     this.setState({serviceData : newArray});
@@ -186,22 +186,22 @@ class ServiceTable extends React.Component {
                     scope="row"
                   >
                     {
-                      serviceData.indexOf(n) === editedIndex || n.name === 'Edit' || n.domain === 'Edit'
+                      serviceData.indexOf(n) === editedIndex || n.name === ' ' || n.domain === ' '
                       ? okBtn(serviceData.indexOf(n))
                       : deleteIcon(serviceData.indexOf(n))}
-                    {serviceData.indexOf(n) === editedIndex || n.name ==='Edit' || n.domain ==='Edit' 
+                    {serviceData.indexOf(n) === editedIndex || n.name ===' ' || n.domain ===' ' 
                       ? cancelBtn
                       : editIcon(serviceData.indexOf(n))}
                   </TableCell>
                   <TableCell>
                     {
-                      serviceData.indexOf(n) === editedIndex || n.domain === 'Edit'
+                      serviceData.indexOf(n) === editedIndex || n.domain === ' '
                       ? editDomain(serviceData.indexOf(n))
                       : n.domain}
                   </TableCell>
                   <TableCell>
                     {
-                      serviceData.indexOf(n) === editedIndex || n.name === 'Edit' ? editName(serviceData.indexOf(n)) : n.name
+                      serviceData.indexOf(n) === editedIndex || n.name === ' ' ? editName(serviceData.indexOf(n)) : n.name
                     }
                   </TableCell>
                 </TableRow>
